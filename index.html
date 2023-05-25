@@ -1,0 +1,291 @@
+--- 
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/share.jpeg" />
+    <!-- Social share meta tags -->
+    <meta property="og:title" content="Home - S.Hemanth" />
+    <meta
+      property="og:description"
+      content="S.Hemanth is a UG2 Research Student @ IIIT-H who loves to code, develop, paint and design."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/share.jpeg" />
+    <meta property="og:site_name" content="S.Hemanth" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="S.Hemanth" />
+    <meta
+      name="twitter:description"
+      content="S.Hemanth is a UG2 Research Student @ IIIT-H who loves to code, develop, paint and design."
+    />
+    <meta name="twitter:image:src" content="assets/images/share.jpeg" />
+    <!-- End social share meta tags -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/projects.css" />
+    <script src="assets\js\polyfills.js" defer></script>
+    <title>Home - S.Hemanth</title>
+    <meta
+      name="description"
+      content="S.Hemanth is a UG2 Research Student @ IIIT_H who loves to code, develop, paint and design."
+    />
+  </head>
+  <body class="dark">
+    <div id="particles-js">
+    </div>
+    <section class="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 col-4-sm">
+            <li>
+              <a href="index.html" title="Home" class="type-white">S.Hemanth</a>
+            </li>
+          </div>
+          <div class="col-9 col-8-sm align-r">
+            <li>
+              <a href="work.html" title="Work" class="type-white">Work</a>
+            </li>
+            <li>
+              <a href="art.html" title="Art" class="type-white">Art</a>
+            </li>
+            <li>
+              <a href="blog.html" title="Blog" class="type-white">Blog</a>
+            </li>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="x-large type-white">I am a Research Student @ IIIT-H.</p>
+            <p class="x-large type-white">
+              <span class="type-white" id="typed">I love to
+              <span id="typed-cursor"></span>
+            </p>
+            <p class="x-large type-white">
+              Other times, you can find me scrolling through memes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <h1 class="type-white">Featured Blog Posts</h1>
+          </div>
+          <div class="col-4 hidden-sm"></div>
+        </div>
+      </div>
+    </section>
+    <div class="insider">
+      <div class="body body--sub">
+        <div
+          class="body__section body__section--case-study-items body__section--fade-up"
+        >
+          {% for post in site.posts %} {% if post.featured == true %}
+          <a
+            href="{{post.url}}"
+            rel="noopener"
+            class="case-study-item case-study-item--hover case-study-item--"
+          >
+            <div class="case-study-item__img">
+              <div class="case-study-item__img__image">
+                {% if post.image %}
+                <img src="assets\images\6.jpg" alt="" aria-label="Read More" />
+                {% else %}
+                <video
+                  muted="muted"
+                  autoplay="autoplay"
+                  loop="loop"
+                  playsinline=""
+                >
+                  <source src="jvg.mov" type="video/mp4" />
+                </video>
+                {% endif %}
+              </div>
+            </div>
+            <div class="case-study-item__data">
+              <div class="case-study-item__data--content">
+                <div class="case-study-item__meta type-white">
+                  <span class="type-white"
+                    >{{ post.date | date_to_string }}</span
+                  >
+                </div>
+                <div class="case-study-item__copy">
+                  <h2>{{post.title}}</h2>
+                  <p>{{post.description}}</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          {% endif %} {% endfor %}
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-5">
+            <li>
+              <a href="/blog" title="Blog" class="type-white">See all Posts</a>
+            </li>
+          </div>
+          <div class="col-2 col-1-sm"></div>
+          <div class="col-4 col-10-sm"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <li>
+              <a
+                href="mailto:"
+                title="Email"
+                target="_blank"
+                class="type-white"
+                >Email</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:hemanthgoud431@gmail.com"
+                title="Email"
+                target="_blank"
+                class="type-white"
+                >Gmail</a
+              >
+            </li>
+          </div>
+          <div class="col-2">
+            <li>
+              <a
+                href=""
+                title="LinkedIn"
+                target="_blank"
+                class="type-white"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                title="Instagram"
+                target="_blank"
+                class="type-white"
+                >Instagram</a
+              >
+            </li>
+          </div>
+          <div class="col-2">
+            <li>
+              <a
+                href=""
+                title="Facebook"
+                target="_blank"
+                class="type-white"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                title="Github"
+                target="_blank"
+                class="type-white"
+                >Github</a
+              >
+            </li>
+          </div>
+          <div class="col-2">
+            <li>
+              <a
+                href=""
+                title="Telegram"
+                target="_blank"
+                class="type-white"
+                >Telegram</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                title="DeviantArt"
+                target="_blank"
+                class="type-white"
+                >DevianArt</a
+              >
+            </li>
+          </div>
+          <div class="col-2 hidden-sm"></div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <p class="label type-white">Why not checkout out my</p>
+            <p>
+              <a href="work.html" title="Work" class="heavy type-white"
+                >Work</a
+              >
+            </p>
+            <p>
+              <a href="art.html" title="Art" class="heavy type-white">Art</a>
+            </p>
+            <p>
+              <a href="blog.html" title="Blog" class="heavy type-white">Blog</a>
+            </p>
+          </div>
+          <div class="col-3">
+            <p class="label type-white">
+              Some stuff about me if that interests you...
+            </p>
+            <p>
+              <a href="about.html" title="About" class="heavy type-white"
+                >About me</a
+              >
+            </p>
+          </div>
+          <div class="col-3">
+            <p class="label type-white">Read my</p>
+            <p>
+              <a
+                href="file:///C:/Users/gouds/OneDrive/Documents/RESUME%202.pdf"
+                title="Resume"
+                target="_blank"
+                class="heavy type-white"
+                >Resume</a
+              >
+            </p>
+          </div>
+          <div class="col-3">
+            <p class="label type-white">
+              Give the CLI version of this website a visit
+            </p>
+            <p>
+              <a href="/cli.html" title="CLI" class="heavy type-white">CLI</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="assets/js/particles.js" defer></script>
+    <script src="assets/js/particlesrunner.js" defer></script>
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/type.js" defer></script>
+  </body>
+</html>
